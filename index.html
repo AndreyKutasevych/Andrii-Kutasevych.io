@@ -10,7 +10,6 @@
       --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       --max-width: 850px;
     }
-
     body {
       font-family: var(--font-main);
       background-color: #ffffff;
@@ -19,12 +18,10 @@
       margin: 0 auto;
       max-width: var(--max-width);
     }
-
     h1 {
       font-size: 2em;
       margin-bottom: 0;
     }
-
     .contact {
       font-size: 0.95em;
       color: #333;
@@ -33,19 +30,16 @@
       flex-wrap: wrap;
       gap: 0.5rem;
     }
-
     .contact a {
       color: var(--primary-color);
       text-decoration: none;
     }
-
     h2 {
       border-bottom: 2px solid #ccc;
       padding-bottom: 3px;
       margin-top: 2rem;
       font-size: 1.2em;
     }
-
     .job-header, .project-header, .education-header {
       display: flex;
       flex-wrap: wrap;
@@ -53,26 +47,21 @@
       font-weight: bold;
       margin-top: 1em;
     }
-
     ul {
       margin-top: 0.3em;
       margin-bottom: 0.8em;
       padding-left: 1.2em;
     }
-
     li {
       margin-bottom: 0.4em;
     }
-
     .section {
       margin-bottom: 1.5rem;
     }
-
     @media (max-width: 600px) {
       body {
         padding: 1rem;
       }
-
       .job-header, .project-header, .education-header {
         flex-direction: column;
         align-items: flex-start;
@@ -95,26 +84,16 @@
   <div class="section">
     <h2>SKILLS</h2>
     <ul>
-      <li>Programming Languages: C#, Java, Python, PHP, JavaScript, HTML, CSS</li>
-      <li>Tools & Platforms: Git, Trello, Jira</li>
-      <li>Cybersecurity: Penetration Testing, Bug Bounty Hunting, OWASP Zap, Burp Suite</li>
-      <li>Fundamentals: Data Structures & Algorithms, OOP, AI</li>
-      <li>Operating Systems: Linux, Windows</li>
+      <li>Programming Languages: C#, Java, Python, PHP, JavaScript</li>
+      <li>Tools & Platforms: Git, Trello, AWS</li>
+      <li>Cybersecurity: OWASP Zap, Burp Suite, Nmap, Aircrack-ng, hashcat</li>
+      <li>Fundamentals: Data Structures & Algorithms, OOP, AI, Penetration Testing</li>
+      <li>Operating Systems: Linux (Kali, ParrotOS, Ubuntu, RaspberryPi, RHEL), Windows</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>PROJECTS</h2>
-
-    <div class="project-header">
-      <span>AI Red Team Model Creator — Personal</span>
-      <span>Ongoing</span>
-    </div>
-    <ul>
-      <li>Developing a web-based application using Gemini AI to create models for red teaming.</li>
-      <li>Integrated CI/CD pipeline using Docker and GitHub Actions for automated testing and deployment.</li>
-      <li>Technologies: Flask, Python, GitHub Actions, Gemini AI.</li>
-    </ul>
 
     <div class="project-header">
       <span>Personal VPN and Samba server</span>
@@ -127,14 +106,25 @@
     </ul>
 
     <div class="project-header">
+      <span>PHP Website Security Assessment</span>
+      <span>Completed April 2025</span>
+    </div>
+    <ul>
+      <li>Assessed website security using Burp Suite, OWASP Zap, and Nmap.</li>
+      <li>Identified and mitigated vulnerabilities such as XSS, CSRF, and SQLi.</li>
+      <li>Grade: 97%</li>
+      <li>Technologies: Linux (Ubuntu), Burp Suite, OWASP Zap, Nmap.</li>
+    </ul>
+
+    <div class="project-header">
       <span>Vienna U-Bahn Route Finder — SETU</span>
       <span>Completed May 2025</span>
     </div>
     <ul>
-      <li>Led a team to develop a user-friendly train route finder system.</li>
-      <li>Recognized for outstanding JavaFX design by faculty.</li>
+      <li>Led a team of three to develop a train system route finder, ensuring a user-friendly experience.</li>
+      <li>Made one of the best JavaFX designs, according to lecturer.</li>
       <li>Grade: 99% – highest in class.</li>
-      <li>Technologies: Java, JavaFX, Git, Data Structures and Algorithms.</li>
+      <li>Technologies: Java, JavaFX, Git, Data Structures & Algorithms.</li>
     </ul>
   </div>
 
@@ -147,9 +137,8 @@
     <ul>
       <li>BSc (Hons) in Computer Science – September 2023 – Present</li>
       <li>Expected graduation: May 2027</li>
-      <li>GPA: Year 1 – 73%, Year 2 – 75%</li>
-      <li>Google TY Program Participant (2023), Google Cybersecurity Certified</li>
-      <li>Google AI Hackathon Participant (2025)</li>
+      <li>GPA: Year 1 – 74%, Year 2 – 70%</li>
+      <li>Google TY Program Participant (2023), Google Cybersecurity Certified, Google & Hack the Box AI Red Teamer Cybersecurity Certified</li>
     </ul>
   </div>
 
@@ -157,32 +146,17 @@
     <h2>EXPERIENCE</h2>
 
     <div class="job-header">
-      <span>Disparos</span>
-      <span>Poland (Remote)</span>
-    </div>
-    <div class="job-header">
-      <span>Software Developer</span>
-      <span>May 2025 – Present</span>
-    </div>
-    <ul>
-      <li>Developing software to filter ads from e-commerce platforms.</li>
-      <li>Optimized product logic to reduce ad loading time from 30 minutes to under 5 minutes.</li>
-      <li>Implemented test strategies and applied team feedback to ensure robust performance.</li>
-      <li>Technologies: C#, Git, Grafana, AWS.</li>
-    </ul>
-
-    <div class="job-header">
       <span>KFC – Supermac’s & Papa John’s</span>
       <span>Waterford, Ireland</span>
     </div>
     <div class="job-header">
-      <span>Catering Assistant</span>
+      <span>Team Member</span>
       <span>August 2023 – Present</span>
     </div>
     <ul>
-      <li>2+ years in high-volume food service environment.</li>
-      <li>Led team operations to improve efficiency and workflow.</li>
-      <li>Named Employee of the Month for taking 30% more shifts and delivering outstanding service.</li>
+      <li>2+ years of work in a fast-paced fast-food industry.</li>
+      <li>Employee of the Month</li>
+      <li>Worked smoothly and organized during peak hours, coordinated small teams during busy day shifts and closing night shifts (performed verified team closing procedures)</li>
     </ul>
   </div>
 
