@@ -54,7 +54,7 @@ footer{padding:36px 20px 56px;color:var(--mute);font-size:.85rem;border-top:1px 
 <p class="meta">Threat intelligence report · Infrastructure correlation and attribution assessment · 20 August 2026 · Analyst: ACTRBot</p>
 </div></header>
 <nav><div class="in">
-<a href="#summary">Summary</a><a href="#campaigns">Campaigns</a><a href="#cluster">Shared hosting</a><a href="#admin">Admin panel</a><a href="#history">History</a><a href="#traffic">Traffic</a><a href="#iocs">IOCs</a><a href="#actions">Actions</a><a href="#confidence">Confidence</a>
+<a href="#summary">Summary</a><a href="#campaigns">Campaigns</a><a href="#cluster">Shared hosting</a><a href="#admin">Admin panel</a><a href="#history">History</a><a href="#traffic">Traffic</a><a href="#iocs">IOCs</a><a href="#update">Update</a>
 </div></nav>
 <main>
 
@@ -106,7 +106,7 @@ footer{padding:36px 20px 56px;color:var(--mute);font-size:.85rem;border-top:1px 
 <tr><th>Domain</th><th>Role</th><th>Host</th></tr>
 <tr><td><code>gammonef[.]com</code></td><td>Backend pivot; real product is "Gama Casino"</td><td><code>84.32.96.43</code></td></tr>
 <tr><td><code>adminka.gammonef[.]com</code></td><td>Live admin panel</td><td><code>84.32.96.43</code></td></tr>
-<tr><td><code>api.gammonef[.]com</code></td><td>API backend, 92,703 passive-DNS resolutions (with the apex)</td><td><code>84.32.96.43</code></td></tr>
+<tr><td><code>api.gammonef[.]com</code></td><td>API backend, 92,703 passive-DNS resolutions (with the apex)</td><td><code>84.32.96.43</code> (now <code>84.32.96.45</code>, see update)</td></tr>
 <tr><td><code>wlfcasino[.]com</code></td><td>Sibling white-label brand; VirusTotal: Gambling, Phishing</td><td><code>194.145.208.201/238</code></td></tr>
 <tr><td><code>picbaron[.]com</code>, <code>imgbaron[.]com</code></td><td>Legacy 2018-2019 infrastructure</td><td><code>185.66.141.114</code></td></tr>
 </table></div>
@@ -195,29 +195,18 @@ footer{padding:36px 20px 56px;color:var(--mute);font-size:.85rem;border-top:1px 
 </ul>
 </section>
 
-<section id="actions">
-<h2>Recommendations</h2>
-<ol>
-<li><strong>Block</strong> the domains and IPs above, prioritizing <code>185.66.140.0/22</code> and <code>84.32.96.0/24</code>.</li>
-<li><strong>Report abuse</strong> to KnownSRV Ltd., Cherry Servers/IPXO LLC, REG.RU LLC and Cloudflare.</li>
-<li><strong>Escalate payment rails</strong> (<code>vgamblpay[.]com</code>, <code>linkpayred[.]com</code>, <code>pay.vvadagami[.]com</code>) to processors and acquirers. This is likely the fastest route to disruption.</li>
-<li><strong>Monitor</strong> new drgn*/mell* registrations; several new burners appear each week.</li>
-<li><strong>Alert Discord</strong> Trust &amp; Safety about the account-compromise DM vector, with sample IOCs.</li>
-<li><strong>Identity attribution</strong> needs legal process: registrant KYC from REG.RU, hosting billing records or payment processor KYC.</li>
-</ol>
-</section>
 
-<section id="confidence">
-<h2>Confidence</h2>
+<section id="update">
+<h2>Status check, 5 October 2026</h2>
+<p>A later check found the core infrastructure still live, so the operation is not stale.</p>
 <div class="tbl"><table>
-<tr><th>Judgment</th><th>Confidence</th></tr>
-<tr><td>Fozawin and Mellstroy share operator or infrastructure</td><td>High</td></tr>
-<tr><td>Operator has an 8+ year continuous infrastructure history</td><td>High</td></tr>
-<tr><td>No named actor or APT exists for this operation</td><td>High (absence of evidence)</td></tr>
-<tr><td>Admin panel is the control point for both campaigns</td><td>Medium</td></tr>
-<tr><td>Operator originated from the adult-content affiliate business</td><td>Medium-High</td></tr>
+<tr><th>Asset</th><th>Status</th></tr>
+<tr><td><code>fozawin[.]com</code>, <code>drgn43[.]casino</code>, <code>api.drgn43[.]casino</code>, <code>gammonef[.]com</code>, <code>adminka.gammonef[.]com</code></td><td>Resolving. TLS certificates reissued 17-27 Sep, expiring 16-26 Dec 2026.</td></tr>
+<tr><td><code>wlfcasino[.]com</code>, <code>mellstroy-igame[.]bet</code></td><td>Resolving. Certificates issued 17 Aug, expiring 15 Nov 2026.</td></tr>
+<tr><td><code>picbaron[.]com</code></td><td>Alive; redirects to <code>www.picbaron[.]com</code> via Namecheap URL forwarding.</td></tr>
+<tr><td><code>api.gammonef[.]com</code></td><td>Changed: now resolves to <code>84.32.96.45</code> instead of <code>.43</code>, within the same host and subnet. Update any IOC list that pins the exact address.</td></tr>
+<tr><td><code>imgbaron[.]com</code></td><td>Changed: no A record any more.</td></tr>
 </table></div>
-<p>Gaps: Censys, Team Cymru Scout, crt.sh and several internal data sources were unavailable during the investigation, so those avenues remain open for follow-up.</p>
 </section>
 </main>
 <footer>Report dated 2026-08-20. No authentication attempts or exploitation were performed at any stage.</footer>
