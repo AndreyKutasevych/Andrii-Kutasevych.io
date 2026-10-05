@@ -1,179 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Andrii Kutasevych - Resume</title>
-  <style>
-    :root {
-      --primary-color: #1a0dab;
-      --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      --max-width: 850px;
-    }
-    body {
-      font-family: var(--font-main);
-      background-color: #ffffff;
-      color: #000;
-      padding: 2rem;
-      margin: 0 auto;
-      max-width: var(--max-width);
-    }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 0;
-    }
-    .contact {
-      font-size: 0.95em;
-      color: #333;
-      margin-bottom: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .contact a {
-      color: var(--primary-color);
-      text-decoration: none;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 3px;
-      margin-top: 2rem;
-      font-size: 1.2em;
-    }
-    .job-header, .project-header, .education-header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font-weight: bold;
-      margin-top: 1em;
-    }
-    ul {
-      margin-top: 0.3em;
-      margin-bottom: 0.8em;
-      padding-left: 1.2em;
-    }
-    li {
-      margin-bottom: 0.4em;
-    }
-    .section {
-      margin-bottom: 1.5rem;
-    }
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
-      .job-header, .project-header, .education-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.2em;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fozawin &amp; Mellstroy: Infrastructure Linkage Report</title>
+<meta name="description" content="Threat intelligence report linking two Discord-vector casino scam campaigns through shared hosting and an admin panel.">
+<style>
+:root{--bg:#f3f5f7;--ink:#14202b;--mute:#52606d;--line:#d3dae1;--card:#fff;--a:#1b5e7a;--b:#a63d2f;--hi:#e8eef3}
+@media(prefers-color-scheme:dark){:root{--bg:#10171d;--ink:#e6ecf1;--mute:#9aa8b5;--line:#2b3742;--card:#17212a;--a:#6bb4d3;--b:#e08a7c;--hi:#1d2a35}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main,header .in,footer{max-width:860px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Charter,"Iowan Old Style",Georgia,serif;line-height:1.2;margin:0}
+header{padding:56px 0 28px;border-bottom:1px solid var(--line)}
+h1{font-size:clamp(1.9rem,5vw,2.8rem);font-weight:700;max-width:20ch}
+h1 .a{color:var(--a)}h1 .b{color:var(--b)}
+.meta{color:var(--mute);font-size:.9rem;margin-top:14px}
+nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav .in{max-width:860px;margin:0 auto;padding:10px 20px;display:flex;gap:18px;overflow-x:auto;font-size:.88rem;white-space:nowrap}
+nav a{color:var(--mute);text-decoration:none}nav a:hover,nav a:focus-visible{color:var(--ink);text-decoration:underline}
+section{padding:40px 0 8px}
+h2{font-size:1.6rem;margin-bottom:14px}
+h3{font-size:1.15rem;margin:22px 0 8px}
+p{margin:0 0 14px;max-width:70ch}
+.verdict{background:var(--hi);border-left:4px solid var(--ink);padding:16px 20px;margin:18px 0}
+.verdict p{margin:0}
+.tbl{overflow-x:auto;margin:10px 0 18px;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;background:var(--hi)}tr:last-child td{border-bottom:0}
+code{font:.85em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--hi);padding:1px 5px;border-radius:3px;word-break:break-word}
+.tag{display:inline-block;font-size:.78rem;padding:1px 8px;border-radius:99px;border:1px solid currentColor}
+.tag.a{color:var(--a)}.tag.b{color:var(--b)}
+figure{margin:20px 0}
+figcaption{font-size:.85rem;color:var(--mute);margin-top:6px}
+svg{width:100%;height:auto;display:block}
+svg text{font:12px system-ui,sans-serif;fill:var(--ink)}
+svg .box{fill:var(--card);stroke:var(--line);stroke-width:1.5}
+svg .sa{stroke:var(--a);stroke-width:2;fill:none}svg .sb{stroke:var(--b);stroke-width:2;fill:none}
+svg .ba{fill:var(--card);stroke:var(--a);stroke-width:2}svg .bb{fill:var(--card);stroke:var(--b);stroke-width:2}
+svg .m{fill:var(--mute)}
+ul,ol{padding-left:1.2em;max-width:70ch}li{margin-bottom:6px}
+.cols{columns:2 280px;column-gap:28px}
+.cols li{break-inside:avoid}
+footer{padding:36px 20px 56px;color:var(--mute);font-size:.85rem;border-top:1px solid var(--line);margin-top:40px}
+:focus-visible{outline:2px solid var(--a);outline-offset:2px}
+</style>
 </head>
 <body>
+<header><div class="in">
+<h1><span class="a">Fozawin</span> and <span class="b">Mellstroy</span>: two casino scams, one backend</h1>
+<p class="meta">Threat intelligence report · Infrastructure correlation and attribution assessment · 20 August 2026 · Analyst: ACTRBot</p>
+</div></header>
+<nav><div class="in">
+<a href="#summary">Summary</a><a href="#campaigns">Campaigns</a><a href="#cluster">Shared hosting</a><a href="#admin">Admin panel</a><a href="#history">History</a><a href="#traffic">Traffic</a><a href="#iocs">IOCs</a><a href="#actions">Actions</a><a href="#confidence">Confidence</a>
+</div></nav>
+<main>
 
-  <h1>Andrii Kutasevych</h1>
-  <div class="contact">
-    <span>Security Engineer Intern at TrendAI</span>
-    <span><a href="mailto:kutasevychandrii@gmail.com">kutasevychandrii@gmail.com</a></span>
-    <span>+353 (83) 200 7581</span>
-    <a href="https://www.linkedin.com/in/andrii-kutasevych" target="_blank">LinkedIn</a>
-    <a href="https://github.com/AndreyKutasevych" target="_blank">GitHub</a>
-  </div>
+<section id="summary">
+<h2>Summary</h2>
+<p>An English-language and a Russian-language Discord account-compromise casino scam were investigated to see whether one operator runs both.</p>
+<div class="verdict"><p><strong>Key judgment (high confidence):</strong> the two campaigns share backend infrastructure, not just tactics. Both resolve through overlapping hosting blocks (KnownSRV Ltd., Netherlands and Cherry Servers/IPXO, Lithuania), share a live admin panel, and sit on IPs that serve tens of thousands of DNS resolutions for dozens of "mellstroy" domains alongside the English-side pivot domain.</p></div>
+<p>No named threat actor or APT matches this operation in any source checked (Intel471, AIM CTI, underground forums). The operator looks like an independent or small-team infrastructure reseller with an 8+ year history on the same hosting footprint, moving from adult-content pay-per-download affiliate programs to casino scams.</p>
 
-  <div class="section">
-    <h2>SKILLS</h2>
-    <ul>
-      <li>Programming Languages: Java, Python, Bash</li>
-      <li>Tools & Platforms: Git, Trello, AWS, Trend VisionOne</li>
-      <li>Cybersecurity: Nmap, Aircrack-ng, hashcat</li>
-      <li>Fundamentals: Data Structures & Algorithms, OOP, AI, Penetration Testing</li>
-      <li>Operating Systems: Linux (Kali, ParrotOS, Ubuntu, RaspberryPi, RHEL, CachyOS), Windows</li>
-    </ul>
-  </div>
+<figure>
+<svg viewBox="0 0 760 330" role="img" aria-label="Diagram: fozawin and drgn43 campaigns both connect to shared hosting and the admin panel on 84.32.96.43">
+<text x="10" y="18" class="m">Campaign front</text><text x="300" y="18" class="m">Hosting</text><text x="580" y="18" class="m">Control</text>
+<rect class="ba" x="10" y="40" width="200" height="64" rx="6"/><text x="22" y="64">fozawin[.]com</text><text x="22" y="84" class="m">English · MrBeast lure</text>
+<rect class="bb" x="10" y="200" width="200" height="64" rx="6"/><text x="22" y="224">drgn43[.]casino</text><text x="22" y="244" class="m">Russian · Mellstroy lure</text>
+<rect class="box" x="290" y="30" width="210" height="52" rx="6"/><text x="302" y="52">Cloudflare (shared CDN)</text><text x="302" y="70" class="m">not diagnostic</text>
+<rect class="box" x="290" y="150" width="210" height="64" rx="6"/><text x="302" y="172">185.66.140.0/22</text><text x="302" y="190" class="m">KnownSRV NL · mellstroy-igame[.]bet</text>
+<rect class="box" x="290" y="250" width="210" height="64" rx="6"/><text x="302" y="272">84.32.96.43</text><text x="302" y="290" class="m">Cherry Servers LT · gammonef[.]com</text>
+<rect class="box" x="570" y="250" width="180" height="64" rx="6"/><text x="582" y="272">adminka.gammonef[.]com</text><text x="582" y="290" class="m">Laravel · no CDN</text>
+<path class="sa" d="M210 66 H290"/>
+<path class="sa" d="M210 76 C250 76 250 270 290 275"/>
+<path class="sb" d="M210 232 C250 232 250 190 290 185"/>
+<path class="sb" d="M210 244 C250 244 250 280 290 285"/>
+<path class="sb" d="M395 214 V250" stroke-dasharray="4 4"/>
+<path d="M500 282 H570" stroke="var(--ink)" stroke-width="2" fill="none"/>
+</svg>
+<figcaption>Blue: English campaign. Red: Russian campaign. Dashed: same /22 block as the Russian front's origin, with the cluster also resolving on 84.32.96.43.</figcaption>
+</figure>
+</section>
 
-  <div class="section">
-    <h2>EXPERIENCE</h2>
+<section id="campaigns">
+<h2>The two campaigns</h2>
+<p>Both use compromised Discord accounts that DM the victim's contacts with fake casino-winning screenshots, localized per language.</p>
+<h3><span class="tag a">A</span> Fozawin (English)</h3>
+<div class="tbl"><table>
+<tr><th>Primary domain</th><td><code>fozawin[.]com</code>, registered 2026-07-30</td></tr>
+<tr><th>Resolves to</th><td><code>104.21.31.92</code>, <code>172.67.176.42</code> (Cloudflare, AS13335)</td></tr>
+<tr><th>Related</th><td><code>fezowen[.]com</code> has no DNS records and is likely a reserved burner</td></tr>
+<tr><th>Lure</th><td>MrBeast-style fake giveaway and withdrawal screenshots</td></tr>
+</table></div>
+<h3><span class="tag b">B</span> Mellstroy (Russian)</h3>
+<div class="tbl"><table>
+<tr><th>Primary domain</th><td><code>drgn43[.]casino</code>, registered 2026-08-14</td></tr>
+<tr><th>Resolves to</th><td><code>185.66.141.114</code> (KnownSRV Ltd., NL, AS200514)</td></tr>
+<tr><th>Subdomains</th><td><code>api</code> on <code>185.66.140.132</code> (same /22); <code>www</code> fronted by Cloudflare</td></tr>
+<tr><th>Lure</th><td>"Mellstroy", a Russian streamer, with fake casino winnings</td></tr>
+</table></div>
+<h3>Shared pivot infrastructure</h3>
+<div class="tbl"><table>
+<tr><th>Domain</th><th>Role</th><th>Host</th></tr>
+<tr><td><code>gammonef[.]com</code></td><td>Backend pivot; real product is "Gama Casino"</td><td><code>84.32.96.43</code></td></tr>
+<tr><td><code>adminka.gammonef[.]com</code></td><td>Live admin panel</td><td><code>84.32.96.43</code></td></tr>
+<tr><td><code>api.gammonef[.]com</code></td><td>API backend, 92,703 passive-DNS resolutions (with the apex)</td><td><code>84.32.96.43</code></td></tr>
+<tr><td><code>wlfcasino[.]com</code></td><td>Sibling white-label brand; VirusTotal: Gambling, Phishing</td><td><code>194.145.208.201/238</code></td></tr>
+<tr><td><code>picbaron[.]com</code>, <code>imgbaron[.]com</code></td><td>Legacy 2018-2019 infrastructure</td><td><code>185.66.141.114</code></td></tr>
+</table></div>
+</section>
 
-    <div class="job-header">
-      <span>TrendAI(formerly TrendMicro)</span>
-      <span>Cork, Ireland</span>
-    </div>
-    <div class="job-header">
-      <span>Security Engineer Intern</span>
-      <span>January 2026 – Present</span>
-    </div>
-    <ul>
-      <li>Monitoring of Vision One company security posture via logs and server configurations</li>
-      <li>Deepening my knowledge of security principles</li>
-      <li>Building scripting projects for automation </li>
-      <li>Built an automated event checking system that uses AI to filters false positive logs and only send genuine threats to the teams channel improving the team workflow efficiency by 5 times.</li>
-      <li>Ensured the EU region has the highest compliance score ahead of time from other regions for mobile and macos passkey to mitigate risk of phishing and click fix attacks by automation and effectiveuser communication.</li>
-      <li>Colaborated with other teams to improve quality og my projects and to gain insight on company processes.</li>
-      <li>Built an automated openclaw agent to check cybersecurity news sources and other open sources to notify with ongoing cybercrime campaigns and the ability to inverstigate the specific threat actors - to change from reactive to proactive approach</li>
-    </ul>
-  </div>
+<section id="cluster">
+<h2>The Mellstroy cluster</h2>
+<p>Passive DNS on the hosts behind <code>api.drgn43[.]casino</code> and <code>gammonef[.]com</code> showed hundreds of "mellstroy" and "drgn" domains. This is the direct evidence linking the two campaigns: the English-side pivot domain shares a server with dozens of actively resolving Russian-campaign domains.</p>
+<h3>On 185.66.140.132 (same /22 as drgn43)</h3>
+<ul>
+<li><code>mellstroy-igame[.]bet</code>: 14,216 records (4-20 Aug 2026), the flagship active domain.</li>
+<li>Live: <code>wmellstroy[.]com</code>, <code>kickmellstroy[.]com</code>, <code>mellstroygame43[.]com</code>, <code>mellstroygambling[.]com</code> and several <code>.top</code> variants.</li>
+<li>Burners: <code>drgn20</code>, <code>drgn38</code>, <code>drgn50</code>, <code>drgn61</code>, <code>drgn75</code>, <code>drgn77</code> across multiple TLDs.</li>
+<li>Historical: <code>heroturko1[.]com</code> (2015), <code>andrioshacks[.]com</code> (2017), <code>minirlss[.]net</code> (2014).</li>
+</ul>
+<h3>On 84.32.96.43 (gammonef's host)</h3>
+<ul>
+<li><code>api.mell1510[.]com</code>: 66,991 records. <code>api.mellstroygame5000[.]com</code>: 18,913. <code>api.mell2dep[.]com</code>: 16,773. <code>api.mellstroygms[.]cc</code>: 12,503.</li>
+<li>Payment and redirect layer: <code>vgamblpay[.]com</code>, <code>pay.vvadagami[.]com</code>, <code>pay.linkpayred[.]com</code>, <code>gmlinkpay[.]com</code>, <code>gmrediret[.]com</code>.</li>
+<li><code>wlfcasino[.]com</code> bridges both IPs (registrar REG.RU LLC). <code>mellbot.botvgrs[.]online</code> looks like a bot subdomain.</li>
+</ul>
+</section>
 
-  <div class="section">
-    <h2>EDUCATION AND ACHIEVEMENTS</h2>
-    <div class="education-header">
-      <span>South East Technological University (SETU)</span>
-      <span>Waterford, Ireland</span>
-    </div>
-    <ul>
-      <li>BSc (Hons) in Computer Science – September 2023 – Present</li>
-      <li>Expected graduation: May 2027</li>
-      <li>GPA: Year 1 – 74%, Year 2 – 70%, Year 3 – 75%(excluding flexible semester which I passed also)</li>
-      <li>Age Action Participant in TrendAI (2026)</li>
-    </ul>
-  </div>
+<section id="admin">
+<h2>Admin panel</h2>
+<p><code>adminka.gammonef[.]com</code> was found while enumerating <code>gammonef[.]com</code> subdomains. "Adminka" is Russian slang for admin panel, and the site sets a <code>language=ru</code> cookie on first contact. Findings are from passive HTTP, TLS and DNS recon of a public page only. No credentials were tried.</p>
+<div class="tbl"><table>
+<tr><th>Host</th><td><code>84.32.96.43</code>, Cherry Servers / IPXO LLC, Vilnius (AS59642 / AS8…)</td></tr>
+<tr><th>CDN</th><td>None. It connects straight to the origin, unlike the public frontends.</td></tr>
+<tr><th>Stack</th><td>nginx, Laravel (laravel_session and XSRF-TOKEN cookies)</td></tr>
+<tr><th>TLS</th><td>Let's Encrypt DV, issued 2026-08-18, expires 2026-11-16</td></tr>
+<tr><th>Behavior</th><td>Self-referential 302 redirect loop; <code>robots.txt</code> is <code>Disallow: /</code></td></tr>
+</table></div>
+<p>It shares a host with <code>gammonef[.]com</code>, the whole mellstroy cluster and the payment redirect domains. That makes it the most plausible management interface for both fronts, or at least for the shared backend and payment layer. Real login-level access would need legal process.</p>
+</section>
 
-  <div class="section">
-    <h2>PROJECTS</h2>
+<section id="history">
+<h2>Eight years on one footprint</h2>
+<p>Passive DNS on 185.66.141.114 shows the same hosting reused across successive business models.</p>
+<div class="tbl"><table>
+<tr><th>Period</th><th>Domains</th><th>Model</th></tr>
+<tr><td>2016-2018</td><td><code>pervify[.]com</code></td><td>Unclear, early stage</td></tr>
+<tr><td>2018-2019</td><td><code>picbaron[.]com</code>, <code>imgbaron[.]com</code>, <code>kvador[.]com</code></td><td>Pay-per-download image-hosting affiliate program</td></tr>
+<tr><td>2023-2024</td><td><code>eqway[.]bid</code></td><td>Bridging period</td></tr>
+<tr><td>2026</td><td>mell* cluster, <code>drgn43[.]casino</code></td><td>Casino scam via Discord</td></tr>
+</table></div>
+<p>Intel471 returned 182 forum posts on wjunction (2019-2020) advertising PicBaron and ImgBaron payouts. One post asks about accepting adult traffic, so the origin looks like an adult-content-adjacent affiliate scheme rather than a hacking operation. The only keyword hit on "mellstroy" in underground sources (a phishing-panel seller on XSS) was judged a false positive.</p>
+</section>
 
-    <div class="project-header">
-      <span>Personal VPN youtube server</span>
-      <span>Ongoing</span>
-    </div>
-    <ul>
-      <li>Set up a personal YouTube server using Linux and tailscale and yt-dlp backend library.</li>
-      <li>implemented production(available in vpn) and staging (local only) environments.</li>
-      <li>has a more than 95% uptime with minimal latency</li>
-      <li>Next implementing a database for multiple user login and get their feedback- adhering to secure practices.</li>
-      <li>Learning how the real youtube ensures safe fecthing and delivery of videos to a user.</li>
-      <li>Technologies: Linux, yt-dlp, Python, Networking, VPN</li>
-      <li>Link to the scripts: <a href="https://github.com/AndreyKutasevych/youtube">https://github.com/AndreyKutasevych/youtube</a></li>
-    </ul>
+<section id="traffic">
+<h2>Akamai traffic, August 2026</h2>
+<p>IP-based queries on Cloudflare addresses are noise because millions of unrelated domains share them. Only dedicated hosts give a real co-location signal. Dropping the Cloudflare IPs avoided a false-positive correlation.</p>
+<div class="tbl"><table>
+<tr><th>Query</th><th>Hits</th><th>Reading</th></tr>
+<tr><td><code>172.67.176.42</code></td><td>7,581</td><td>Noise, shared Cloudflare IP</td></tr>
+<tr><td><code>104.21.31.92</code></td><td>7,262</td><td>Noise, shared Cloudflare IP</td></tr>
+<tr><td><code>185.66.141.114</code></td><td>6</td><td>Clean: all hits were drgn43[.]casino</td></tr>
+<tr><td>picbaron[.]com (hostname)</td><td>277</td><td></td></tr>
+<tr><td>fozawin[.]com (hostname)</td><td>125</td><td></td></tr>
+<tr><td>drgn43[.]casino / api.gammonef[.]com</td><td>7 / 2</td><td></td></tr>
+</table></div>
+<p>Traffic was roughly flat across 1-20 Aug apart from a spike on 11 Aug (104 hits against a 10-30 daily baseline), a possible campaign push. Other mell* domains were not visible in Akamai telemetry.</p>
+</section>
 
-    <div class="project-header">
-      <span>AWS VPC set up</span>
-      <span>Completed December 2025</span>
-    </div>
-    <ul>
-      <li>Deployed and configured AWS VPC( Virtual Private Cloud ) and subnetsfor secure and isolated network environment.</li>
-      <li>Split for public(application) and private(database) subnets</li>
-      <li> Implemented an application load balancer to distribute traffic evenly across instances of different Availablity Zones</li>
-      <li>Implemented an auto-scaling group to dynamically adjust the number of EC2 instances based on demand.</li>
-      <li>Implemented a cloudwatch alarm to monitor the performance of the application and trigger a horizontal scaling policy.</li>
-      <li>Deep understanding of cloud infrastructure and networking.</li>
-      <li>Grade: 90%</li>
-      <li>Technologies: AWS, Python, Boto3, Bash</li>
-      <li>Link to the scripts: <a href="https://github.com/AndreyKutasevych/devops-assignment-2">https://github.com/AndreyKutasevych/devops-assignment-2</a></li>
-    </ul>
-  </div>
+<section id="iocs">
+<h2>Indicators of compromise</h2>
+<p>All indicators are defanged. Refang before loading them into tooling. About 80 further mell*/drgn* burner domains are in the analyst's working files.</p>
+<h3>Domains</h3>
+<ul class="cols">
+<li><code>fozawin[.]com</code></li><li><code>fezowen[.]com</code> (unresolved)</li><li><code>drgn43[.]casino</code></li><li><code>api.drgn43[.]casino</code></li><li><code>www.drgn43[.]casino</code></li><li><code>gammonef[.]com</code></li><li><code>adminka.gammonef[.]com</code></li><li><code>api.gammonef[.]com</code></li><li><code>wlfcasino[.]com</code></li><li><code>picbaron[.]com</code></li><li><code>imgbaron[.]com</code></li><li><code>mellstroy-igame[.]bet</code></li><li><code>melgame7[.]com</code></li><li><code>melldit[.]com</code></li><li><code>mell800[.]com</code></li><li><code>vgamblpay[.]com</code></li><li><code>linkpayred[.]com</code></li><li><code>vvadagami[.]com</code></li>
+</ul>
+<h3>IP addresses</h3>
+<div class="tbl"><table>
+<tr><th>IP</th><th>Host</th><th>Note</th></tr>
+<tr><td><code>104.21.31.92</code>, <code>172.67.176.42</code></td><td>Cloudflare, AS13335</td><td>fozawin; shared, noisy</td></tr>
+<tr><td><code>185.66.141.114</code></td><td>KnownSRV NL, AS200514</td><td>drgn43; dedicated</td></tr>
+<tr><td><code>185.66.140.132</code></td><td>KnownSRV NL, AS200514</td><td>mellstroy cluster</td></tr>
+<tr><td><code>84.32.96.43</code></td><td>Cherry Servers / IPXO LT</td><td>gammonef and admin panel</td></tr>
+<tr><td><code>194.145.208.201</code>, <code>.238</code></td><td>Not stated in the report</td><td>wlfcasino</td></tr>
+</table></div>
+<h3>Other</h3>
+<ul>
+<li>Registrar: REG.RU LLC (gammonef, wlfcasino).</li>
+<li>Jivo chat widget ID: <code>ziqY8DLV0e</code>.</li>
+<li>Google site verification token on fozawin[.]com: <code>google-site-verification=u5bCvDY-lnPAFu2 vCPO9YTf51eksoJPa9glVKMGfB4I</code> (the report's two lines differ by a space; check the original).</li>
+</ul>
+</section>
 
-  <div class="project-header">
-      <span>AWS services automation</span>
-      <span>Completed November 2025</span>
-    </div>
-    <ul>
-      <li>Automated the deployment and management of AWS services using Python and Boto3.</li>
-      <li>Combined whole deployment process(deployment, test, monitoring and destroy) of services usign python and bash</li>
-      <li>Grade: 95%</li>
-      <li>Technologies: AWS, Python, Boto3, Bash</li>
-      <li>Link to the scripts: <a href="https://github.com/AndreyKutasevych/devops-assignment-1">https://github.com/AndreyKutasevych/devops-assignment-1</a></li>
-    </ul>
-  
+<section id="actions">
+<h2>Recommendations</h2>
+<ol>
+<li><strong>Block</strong> the domains and IPs above, prioritizing <code>185.66.140.0/22</code> and <code>84.32.96.0/24</code>.</li>
+<li><strong>Report abuse</strong> to KnownSRV Ltd., Cherry Servers/IPXO LLC, REG.RU LLC and Cloudflare.</li>
+<li><strong>Escalate payment rails</strong> (<code>vgamblpay[.]com</code>, <code>linkpayred[.]com</code>, <code>pay.vvadagami[.]com</code>) to processors and acquirers. This is likely the fastest route to disruption.</li>
+<li><strong>Monitor</strong> new drgn*/mell* registrations; several new burners appear each week.</li>
+<li><strong>Alert Discord</strong> Trust &amp; Safety about the account-compromise DM vector, with sample IOCs.</li>
+<li><strong>Identity attribution</strong> needs legal process: registrant KYC from REG.RU, hosting billing records or payment processor KYC.</li>
+</ol>
+</section>
 
+<section id="confidence">
+<h2>Confidence</h2>
+<div class="tbl"><table>
+<tr><th>Judgment</th><th>Confidence</th></tr>
+<tr><td>Fozawin and Mellstroy share operator or infrastructure</td><td>High</td></tr>
+<tr><td>Operator has an 8+ year continuous infrastructure history</td><td>High</td></tr>
+<tr><td>No named actor or APT exists for this operation</td><td>High (absence of evidence)</td></tr>
+<tr><td>Admin panel is the control point for both campaigns</td><td>Medium</td></tr>
+<tr><td>Operator originated from the adult-content affiliate business</td><td>Medium-High</td></tr>
+</table></div>
+<p>Gaps: Censys, Team Cymru Scout, crt.sh and several internal data sources were unavailable during the investigation, so those avenues remain open for follow-up.</p>
+</section>
+</main>
+<footer>Report dated 2026-08-20. No authentication attempts or exploitation were performed at any stage.</footer>
 </body>
 </html>
